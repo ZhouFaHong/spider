@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <style type="text/css">
+        h2{
+            color: red;
+        }
+      </style>
+    <!-- <link rel="stylesheet" type="text/css" href="/css/home.css" />  -->
+</head>
+<body>
+    <h2><%= data %></h2>
+    <span>
+        <input type="button" value="新闻" onclick="gotoNews(1)">
+        <input type="button" value="新闻" onclick="gotoNews(2)">
+        <input type="button" value="新闻" onclick="gotoNews(3)">
+    </span>
+    <div>
+        <input type="button" value="新闻" onclick="gotoNews(4)">
+        <input type="button" value="新闻" onclick="gotoNews(5)">
+        <input type="button" value="新闻" onclick="gotoNews(6)">
+    </div>
+    <div>
+        <input type="button" value="新闻" onclick="gotoNews(7)">
+        <input type="button" value="新闻" onclick="gotoNews(8)">
+        <input type="button" value="新闻" onclick="gotoNews(9)">
+    </div>
+    
+    
+</body>
+<script>
+    function gotoNews(page) {
+        window.location.href="news?page="+page;
+    }
+</script>
+</html>

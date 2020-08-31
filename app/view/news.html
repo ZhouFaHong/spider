@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻</title>
+    <style>
+        h1 {
+          margin-top: 60px;
+          text-align: center;
+        }
+    
+        .box {
+          width: 1000px;
+          margin: 80px auto;
+        }
+    
+        .inp {
+          margin-bottom: 10px;
+        }
+    
+        table {
+          width: 100%;
+          text-align: center;
+          background-color: #F5F5F5;
+        }
+    
+        td {
+          border: 1px solid #ccc;
+        }
+    
+        tr:nth-child(1) {
+          background-color: pink;
+        }
+    
+        .date {
+          background-color: #DFF0D8;
+        }
+    
+        .temperature {
+          background-color: #8ED0F9;
+        }
+    
+        .wind {
+          background-color: #FCF8E3;
+        }
+      </style>
+</head>
+<body>
+    <div class="box">
+        <table cellspacing="0" cellpadding="10">
+            <tr>
+                <td> aid </td>
+                <td>catid</td>
+                <td>username</td>
+                <td>title</td>
+                <td>pic</td>
+                <td>dateline</td>
+              </tr>
+          <% for(let i = 0; i < list.length; i++) { %>
+          <tr>
+            <td class="date"><%= list[i].aid %></td>
+            <td class="temperature"><%= list[i].catid %></td>
+            <td class="wind"><%= list[i].username %></td>
+            <td><a href="/newscontent?aid=<%= list[i].aid %>"><%= list[i].title %></a></td>
+            <td>
+                <img src= <%= api %><%= list[i].pic %>/>
+                <%= api + list[i].pic %></td>
+            <td><%= helper.format(list[i].dateline) %></td>
+          </tr>
+          <% } %>
+        </table>
+        <!-- <% for(let i = 0; i < list.length; i++) { %>
+          <li>
+            <a href="#taobao"><%= list[i].title %></a>
+          </li>
+        <% } %> -->
+      </div>
+</body>
+</html>
