@@ -1,6 +1,10 @@
 # spider
 
-
+一个基于egg.js的简单的爬虫：
+1. 使用 了 mongodb 
+2. 日期的修改
+3. helper的扩展
+4. MVC模式
 
 ## QuickStart
 
